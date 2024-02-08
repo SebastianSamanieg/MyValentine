@@ -8,9 +8,9 @@
   --bs-red: #dc3545;
   --bs-orange: #fd7e14;
   --bs-yellow: #ffc107;
-  --bs-green: #198754;
-  --bs-teal: #1abc9c;
-  --bs-cyan: #0dcaf0;
+  --bs-green: #871981;
+  --bs-teal: #b71abc;
+  --bs-cyan: #f00da4;
   --bs-black: #000;
   --bs-white: #fff;
   --bs-gray: #6c757d;
@@ -24,7 +24,7 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #1abc9c;
+  --bs-primary: #b71abc;
   --bs-secondary: #2c3e50;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
@@ -63,11 +63,18 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #1abc9c;
-  --bs-link-hover-color: #15967d;
+  --bs-link-color: #b71abc;
+  --bs-link-hover-color: #8b1596;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
+
+
+/* Estilo para redondear los bordes de la imagen del medio */
+.masthead-avatar:nth-child(2) {
+  border-radius: 50%; /* Esto redondea los bordes de la imagen */
+}
+
 
 *,
 *::before,
@@ -375,6 +382,7 @@ button,
 [type=reset],
 [type=submit] {
   -webkit-appearance: button;
+  appearance: button;
 }
 button:not(:disabled),
 [type=button]:not(:disabled),
@@ -433,6 +441,7 @@ legend + * {
 [type=search] {
   outline-offset: -2px;
   -webkit-appearance: textfield;
+  appearance: textfield;
 }
 
 /* rtl:raw:
@@ -454,6 +463,7 @@ legend + * {
 ::file-selector-button {
   font: inherit;
   -webkit-appearance: button;
+  appearance: button;
 }
 
 output {
