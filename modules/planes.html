@@ -169,10 +169,36 @@
             background-color: #ff4961;
             /* Color de fondo al pasar el mouse */
         }
+
+      /* Estilos personalizados */
+      .custom-button-container {
+        position: absolute;
+        top: 10px; /* Ajusta según sea necesario */
+        left: 10px; /* Ajusta según sea necesario */
+      }
+      .rounded-button {
+        border-radius: 20px; /* Ajusta el radio de los bordes según sea necesario */
+        background-color: #d81159;
+        border-color: #d81159;
+        color: white; /* Color del texto */
+        padding: 10px 20px; /* Ajusta el relleno según sea necesario */
+        cursor: pointer; /* Cambia el cursor al pasar el ratón */
+        font-size: 16px; /* Tamaño de la fuente */
+        outline: none; /* Elimina el contorno al hacer clic */
+    }
+
+    .rounded-button:hover {
+        background-color: #bd0b4c; /* Cambia el color de fondo al pasar el ratón */
+        border-color: #bd0b4c; /* Cambia el color del borde al pasar el ratón */
+    }
     </style>
 </head>
 
 <body>
+    <div class="custom-button-container">
+        <!-- Botón personalizado -->
+        <button type="button" class="rounded-button" onclick="window.location.href = '../index.html';">Back</button>
+    </div>
 
     <div class="container">
         <h2>Cada corazón tiene un plan diferente, solo puedes escoger uno</h2>
@@ -182,34 +208,34 @@
         <a href="#opcion3" class="option">❤️</a>
 
         <div id="opcion1" class="message">
-            <div>¿Estás seguro de que quieres escoger este?</div>
+            <div>¿Estás segura de que quieres escoger este?❤️</div>
             <a href="#plan1" class="button">Confirmar Corazón 1</a>
         </div>
         <div id="opcion2" class="message">
-            <div>¿Estás seguro de que quieres escoger este?</div>
+            <div>¿Estás segura de que quieres escoger este?❤️</div>
             <a href="#plan2" class="button">Confirmar Corazón 2</a>
         </div>
         <div id="opcion3" class="message">
-            <div>¿Estás seguro de que quieres escoger este?</div>
+            <div>¿Estás segura de que quieres escoger este?❤️</div>
             <a href="#plan3" class="button">Confirmar Corazón 3</a>
         </div>
 
 
         <div id="plan1" class="valentine-surprise">
             <h3>Feliz Día de San Valentín ❤️</h3>
-            <p>¡Has ganado una escapada conmigo para este fin de semana! Está todo organizado 🏔️</p>
+            <p>¡Has ganado una tarde llena de peliculas, arrunchis, helado y hamburguesas! 🍔🍿😴🍨</p>
             <!--<a href="#" class="button">Descubre tu Sorpresa</a>-->
         </div>
         
         <div id="plan2" class="valentine-surprise">
             <h3>Feliz Día de San Valentín ❤️</h3>
-            <p>¡Has ganado un pícnic al atardecer en la playa! 🌅</p>
+            <p>¡Has ganado una cena romantica! 🌅</p>
             <!--<a href="#" class="button">Descubre tu Sorpresa</a>-->
         </div>
 
         <div id="plan3" class="valentine-surprise">
             <h3>Feliz Día de San Valentín ❤️</h3>
-            <p>¡Has ganado una tarde de shopping con todo pagado! 🛍️</p>
+            <p>¡Has ganado una tarde de shopping! Vamos a comprar tus tennis 🛍️</p>
             <!--<a href="#" class="button">Descubre tu Sorpresa</a>-->
         </div>
     </div>

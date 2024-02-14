@@ -1,0 +1,7 @@
+Para ejecutarlo tienes que descomprimir la carpeta. Haces click derecho encima de la carpeta .zip que has descargado y tiene que aparecerte una opción del estilo 'Extraer'. 
+
+Una vez lo has extraido, tienes que poner tanto la carpeta 'images' como el documento 'adivina.html' en la misma ubicación (por ejemplo en el escritorio).
+
+Para editar los textos, click derecho al documento 'adivina.html' y dentro busca los textos que quieres editar, los sustituyes y guardas el archivo. Luego vuelves a hacer doble click en el y ya tendrá los cambios aplicados.
+
+Cualquier duda escribeme un mensaje privado -> @jonathanbassedas
