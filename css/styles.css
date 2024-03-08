@@ -70,13 +70,6 @@
 }
 
 
-/* Estilo para redondear los bordes de la imagen del medio */
-.masthead-avatar:nth-child(2) {
-  border-radius: 50%;
-  /* Esto redondea los bordes de la imagen */
-}
-
-
 *,
 *::before,
 *::after {
@@ -195,6 +188,8 @@ p {
   margin-top: 0;
   margin-bottom: 1rem;
 }
+
+
 
 abbr[title] {
   -webkit-text-decoration: underline dotted;

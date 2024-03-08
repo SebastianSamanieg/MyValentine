@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sorpresa Romántica</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0e8ff;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        #surpriseButton {
+            padding: 15px 30px;
+            font-size: 20px;
+            color: white;
+            background-color: #e85577;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        #message {
+            display: none;
+            font-size: 26px;
+            color: #d6336c;
+            text-align: center;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .heart {
+            position: fixed;
+            bottom: -100px;
+            height: 60px;
+            width: 60px;
+            font-size: 35px;
+            opacity: 0.7;
+        }
+
+        @keyframes floating {
+            0% {
+                bottom: 100vh;
+                opacity: 0.7;
+            }
+
+            100% {
+                bottom: -100vh;
+                opacity: 0;
+            }
+        }
+
+        /* Estilos personalizados */
+        .custom-button-container {
+            position: sticky;
+            top: -100px;
+            /* Ajusta según sea necesario */
+            left: -100px;
+            /* Ajusta según sea necesario */
+        }
+
+        .rounded-button {
+            border-radius: 20px;
+            /* Ajusta el radio de los bordes según sea necesario */
+            background-color: #d81159;
+            border-color: #d81159;
+            color: white;
+            /* Color del texto */
+            padding: 10px 20px;
+            /* Ajusta el relleno según sea necesario */
+            cursor: pointer;
+            /* Cambia el cursor al pasar el ratón */
+            font-size: 16px;
+            /* Tamaño de la fuente */
+            outline: none;
+            /* Elimina el contorno al hacer clic */
+        }
+
+        .rounded-button:hover {
+            background-color: #bd0b4c;
+            /* Cambia el color de fondo al pasar el ratón */
+            border-color: #bd0b4c;
+            /* Cambia el color del borde al pasar el ratón */
+        }
+
+        .img-fluid {
+            width: 300px;
+            /* Establece el ancho a 300 píxeles */
+            height: 400px;
+            /* Establece la altura a 300 píxeles */
+            border-radius: 50%;
+            /* Redondea la imagen en un círculo completo */
+            object-fit: cover;
+            /* Recorta la imagen para que se ajuste al contenedor */
+        }
+
+        #message {
+            /* Otros estilos */
+            max-height: 600px;
+            /* Establece una altura máxima */
+            overflow-y: auto;
+            /* Habilita la barra de desplazamiento vertical */
+        }
+
+        .poema {
+            margin-left: 20px;
+            font-style: italic;
+        }
+
+        .destacado {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="surpriseButton">Para la mujer mas hermosa</button>
+    <div id="message">
+        <div class="custom-button-container">
+            <!-- Botón personalizado -->
+            <button type="button" class="rounded-button" onclick="window.location.href = '../index.html';">Back</button>
+        </div>
+        <h1>Carta a la mujer de mi vida:</h1>
+        <p>Eres la mujer más increíble del mundo, y me siento afortunado de tenerte en mi vida. Cada día me inspiras a
+            ser mejor persona, y te agradezco por ser mi compañera de por vida.</p>
+
+        <p>Eres una mujer fuerte, inteligente y capaz, y estoy orgulloso de todo lo que has logrado. Tu luz y alegría
+            llenan mi vida de color, y tu ternura y simpatía me hacen sentir el mejor amor.</p>
+
+        <h2 class="destacado">Valentina, mi gordita</h2>
+
+        <p class="poema">
+            Con tus ojos que me hipnotizan,<br>
+            tu sonrisa que me enamora,<br>
+            y tu corazón que me conquista.
+        </p>
+
+        <p>Eres mi pollita, mi dulce compañera, contigo la vida es una fiesta, una aventura que nunca termina.</p>
+
+        <p>Te amo con todo mi corazón, eres mi razón de ser, mi Valentina, mi gordita, la mujer que me hace vibrar.</p>
+
+        <p>Eres una mujer inigualable que me complementa. A tu lado, me siento nervioso como el primer día. Estoy
+            orgulloso de tu inteligencia, lucha y trabajo.</p>
+
+        <p>Me enamoré de mi mejor amiga y quiero darte la vida de princesa que mereces. Estoy seguro de que elegirte como
+            el amor de mi vida fue la mejor decisión que he tomado.</p>
+
+        <p>¡Feliz día mujer!</p>
+        <img class="img-fluid" src="../assets/img/images/juntos.jpg" alt="...">
+
+        <p>Att: Tu príncipe</p>
+    </div>
+
+    <script>
+
+        const confeti = '❤️'; //Sustituir por el emoticono que quieras que llueva (yo uso esta pagina https://emojipedia.org/es)
+
+        document.getElementById("surpriseButton").addEventListener("click", function () {
+            this.style.display = 'none';
+            document.getElementById("message").style.display = "block";
+            startHearts();
+        });
+
+        function startHearts() {
+            for (let i = 0; i < 150; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.style.left = Math.random() * window.innerWidth + 'px';
+                heart.style.animation = 'floating ' + (2 + Math.random() * 3) + 's ease-in infinite';
+                heart.innerText = confeti;
+                heart.style.transform = 'rotate(' + 360 * Math.random() + 'deg)';
+                document.body.appendChild(heart);
+            }
+        }
+    </script>
+</body>
+
+</html>
